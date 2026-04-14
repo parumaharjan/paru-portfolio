@@ -1,11 +1,11 @@
 :root {
-  /* Colours */
+  /* Colours — Light mode */
   --bg:           #f8f4ef;
   --bg-alt:       #f0ebe3;
   --surface:      #ffffff;
   --text:         #1a1614;
   --text-muted:   #6b6560;
-  --accent:       #b85c3a;     
+  --accent:       #b85c3a;       /* terracotta */
   --accent-light: #e8a98a;
   --accent-pale:  #f5e4da;
   --border:       #e0d8d0;
@@ -18,6 +18,7 @@
   /* Speed */
   --speed: 0.3s;
 }
+
 /* =====================================================
    NAVIGATION
 ===================================================== */
@@ -57,3 +58,38 @@
   position: relative;
   transition: color var(--speed);
 }
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+#hero {
+  min-height: 100vh;
+  padding-top: 128px; /* nav (64) + clocks bar (~38) + breathing room */
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft background circles for decoration */
+.hero-bg-circle { position: absolute; border-radius: 50%; opacity: 0.1; pointer-events: none; }
+.hero-bg-circle.c1 { width: 600px; height: 600px; background: var(--accent); top: -150px; right: -150px; }
+.hero-bg-circle.c2 { width: 400px; height: 400px; background: var(--accent-light); bottom: -100px; left: -100px; }
+
+.hero-content {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-greeting { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem; }
+.hero-name { font-family: var(--font-serif); font-size: clamp(3.5rem, 8vw, 6rem); font-weight: 300; margin-bottom: 1rem; }
+.hero-name em { font-style: italic; color: var(--accent); }
+.hero-title { font-size: 0.88rem; letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 1.25rem; }
+.hero-intro { font-size: 1.05rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 2.5rem; max-width: 480px; }
