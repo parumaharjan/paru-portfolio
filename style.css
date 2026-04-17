@@ -115,3 +115,60 @@
 }
 
 
+
+/* =====================================================
+   ABOUT SECTION
+===================================================== */
+/* Simple single-column layout */
+.about-text { max-width: 720px; }
+.about-text p { color: var(--text-muted); margin-bottom: 1.2rem; font-size: 1rem; }
+.about-text strong { color: var(--text); }
+
+
+/* =====================================================
+   SKILLS SECTION
+===================================================== */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+.skill-category {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.75rem;
+  transition: border-color var(--speed);
+}
+.skill-category:hover { border-color: var(--accent-light); }
+
+.cat-title {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cat-icon { color: var(--accent); }
+
+/* Tag pills */
+.tool-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag {
+  background: var(--tag-bg);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.75rem;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  transition: background var(--speed), color var(--speed);
+}
+.tag:hover { background: var(--accent-pale); color: var(--accent); border-color: var(--accent-light); }
+
+/* Concepts list */
+.concept-list { display: flex; flex-direction: column; gap: 0.7rem; }
+.concept-item { display: flex; align-items: center; gap: 0.75rem; font-size: 0.87rem; color: var(--text-muted); }
+.concept-dot  { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
+
+
